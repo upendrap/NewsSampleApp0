@@ -12,7 +12,7 @@ import retrofit2.create
 @Module
 object NetworkModule {
     @Provides
-    fun provideRetrofit() = Retrofit.Builder().baseUrl("https://randomuser.me/api/0.4/")
+    fun provideRetrofit() = Retrofit.Builder().baseUrl("https://dl.dropboxusercontent.com/s/")
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .client(

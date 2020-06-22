@@ -14,7 +14,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.example.newssampleapp.CustomTestRunner"
     }
     buildFeatures {
         viewBinding true
@@ -35,6 +35,9 @@ android {
     kapt {
         correctErrorTypes = true
     }
+    testOptions {
+        animationsDisabled = true
+    }
 }
 
 dependencies {
@@ -46,7 +49,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
+    implementation "androidx.activity:activity-ktx:1.1.0"
+    implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation("com.github.bumptech.glide:glide:4.11.0") {
         exclude group: "com.android.support"
@@ -63,6 +67,7 @@ dependencies {
     //RxJava
     implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    androidTestImplementation 'androidx.test:rules:1.2.0'
 
     //Dagger
     def dagger_version = '2.28'
@@ -77,4 +82,7 @@ dependencies {
     //mockito
     testImplementation "org.mockito:mockito-core:3.3.3"
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation 'com.github.Plastix.RxSchedulerRule:rx2:1.0.2'
+
 }

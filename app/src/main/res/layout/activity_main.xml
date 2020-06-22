@@ -18,5 +18,9 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include
+        layout="@layout/loading_overlay" />
 </FrameLayout>
