@@ -7,4 +7,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NewsTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="fontFamily">serif</item>
+    </style>
+
 </resources>
